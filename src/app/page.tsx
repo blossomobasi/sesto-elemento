@@ -4,6 +4,7 @@ import CoreValues from "@/components/CoreValues";
 import WhyUs from "@/components/WhyUs";
 import WhyUsFirstSlice from "@/components/WhyUsFirstSlice";
 import WhyUsSecondSlice from "@/components/WhyUsSecondSlice";
+import Clients from "@/components/Clients";
 
 export default function HomePage() {
     return (
@@ -13,6 +14,7 @@ export default function HomePage() {
             <WhyUs />
             <WhyUsFirstSlice />
             <WhyUsSecondSlice />
+            <Clients />
         </PageLayout>
     );
 }
