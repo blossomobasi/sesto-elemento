@@ -12,14 +12,14 @@ interface ButtonProps
 const Button = ({ children, url = "" }: ButtonProps) => {
     if (url) {
         return (
-            <Link href={url} className="bg-secondary w-fit text-light px-4 py-2 rounded-md">
+            <Link href={url} className="bg-secondary w-fit text-light px-8 py-2 rounded-md">
                 {children}
             </Link>
         );
     }
 
     return (
-        <button className="bg-secondary w-fit text-light px-4 py-2 rounded-md">{children}</button>
+        <button className="bg-secondary w-fit text-light px-8 py-2 rounded-md">{children}</button>
     );
 };
 
