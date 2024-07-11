@@ -60,8 +60,7 @@ const NavBar = () => {
                     {navData.map((link, i) => (
                         <li key={link.href} className="relative">
                             <Link
-                                // href={link.href}
-                                href={"/"}
+                                href={link.href}
                                 className="flex items-center gap-x-2"
                                 onMouseEnter={() => {
                                     link.subLink && setShowSubLink(i);
