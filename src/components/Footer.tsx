@@ -27,8 +27,8 @@ const Footer = () => {
 
     return (
         <footer className="px-12 flex flex-col space-y-10 py-10">
-            <div className="flex justify-between space-x-10">
-                <div className="flex-[3.5]">
+            <div className="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 lg:gap-20 md:gap-14 gap-10">
+                <div className="col-span-2">
                     <Logo />
                     <p className="mt-5 text-lg">
                         Delivering maximum value by leveraging on our global sourcing networks
