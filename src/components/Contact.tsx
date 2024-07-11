@@ -4,13 +4,13 @@ import Footer from "./Footer";
 const Contact = () => {
     return (
         <section className="bg-primaryVeryLight text-[#333] font-light">
-            <div className="md:w-4/5 w-full px-10 sm:px-0 mx-auto flex items-center justify-between flex-col-reverse space-x-5 sm:flex-row md:py-28 py-10">
-                <div className="sm:w-1/2 flex flex-col gap-y-5">
-                    <h2 className="sm:text-5xl text-3xl font-medium text-secondary">
+            <div className="lg:w-4/5 w-full lg:px-0 sm:px-10 px-5 mx-auto flex items-center justify-between flex-col-reverse space-x-5 md:flex-row md:py-28 py-10">
+                <div className="md:w-1/2 flex flex-col gap-y-5 mt-10 md:mt-0">
+                    <h2 className="lg:text-5xl md:text-4xl text-3xl font-medium text-secondary">
                         Reach Out to Us
                     </h2>
                     <div className="flex flex-col">
-                        <p className="flex space-x-5">
+                        <div className="flex space-x-5">
                             <span>
                                 <Image
                                     src="/assets/marker.png"
@@ -39,7 +39,7 @@ const Contact = () => {
                                     </span>
                                 </div>
                             </div>
-                        </p>
+                        </div>
                     </div>
 
                     <div className="flex items-start space-x-5">
@@ -67,7 +67,7 @@ const Contact = () => {
                     width={1000}
                     height={1000}
                     quality={100}
-                    className="sm:w-1/2 mb-10 sm:mb-0"
+                    className="md:w-1/2 mb-10 sm:mb-0"
                 />
             </div>
 
