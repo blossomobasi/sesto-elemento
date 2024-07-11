@@ -13,7 +13,6 @@ interface NavData {
 }
 
 const NavBar = () => {
-    // const [showSubLink, setShowSubLink] = useState<number | null>(null);
     const [showSubLink, setShowSubLink] = useState(0);
 
     const navData: NavData[] = [
@@ -52,7 +51,7 @@ const NavBar = () => {
     ];
 
     return (
-        <header className="flex items-center justify-between px-16 py-6 bg-white">
+        <header className="flex items-center justify-between px-16 py-6 bg-white sticky top-0 w-full shadow-sm">
             <Logo />
 
             <nav>
