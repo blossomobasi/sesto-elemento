@@ -8,8 +8,8 @@ const CoreValues = () => {
     ];
 
     return (
-        <div className="px-12 py-28">
-            <h2 className="text-center text-5xl font-semibold text-secondary pb-28">
+        <div className="px-12 md:py-28 py-14">
+            <h2 className="text-center md:text-5xl text-4xl font-semibold text-secondary md:pb-28 pb-14">
                 Our Core Values
             </h2>
 
@@ -24,18 +24,6 @@ const CoreValues = () => {
                     </div>
                 ))}
             </div>
-
-            {/* <div className="grid lg:grid-cols-5 md:grid-cols-3 gap-x-5">
-                {coreValues.map((value) => (
-                    <div
-                        key={value}
-                        className="bg-primaryLight rounded-md shadow-xl py-5 px-4 flex flex-col gap-y-3 items-center justify-center"
-                    >
-                        <div className="h-16 w-16 bg-primary rounded-full" />
-                        <p className="text-2xl text-center">{value}</p>
-                    </div>
-                ))}
-            </div> */}
         </div>
     );
 };
