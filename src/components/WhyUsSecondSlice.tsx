@@ -3,19 +3,19 @@ import Image from "next/image";
 
 const WhyUsSecondSlice = () => {
     return (
-        <div className="flex items-center justify-between gap-x-8 py-5 bg-primaryVeryLight">
+        <div className="flex items-center justify-between flex-col md:flex-row gap-x-8 gap-y-10 md:gap-y-0 py-5 bg-primaryVeryLight">
             <Image
-                className="w-1/2"
+                className="md:w-1/2"
                 src="/images/our_expertise.png"
                 alt="Maximizing Operational Efficiency"
                 width={1000}
                 height={1000}
             />
 
-            <div className="pr-12 flex flex-col items-start space-y-5 w-1/2">
-                <h2 className="text-5xl font-semibold">
+            <div className="md:pr-12 px-5 flex flex-col md:items-start text-center items-center space-y-5 md:w-1/2">
+                <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold">
                     <span className="text-primary">Our Expertise</span>{" "}
-                    <span className="text-secondary">Spans For Multiple</span>
+                    <span className="text-secondary">Spans For Multiple </span>
                     <span className="text-primary">Industries</span>
                 </h2>
                 <p>
