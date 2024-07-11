@@ -28,8 +28,8 @@ const Clients = () => {
     // ];
 
     return (
-        <div>
-            <h5 className="text-center font-medium text-secondary py-20 text-2xl">
+        <div className="py-20">
+            <h5 className="text-center font-medium text-secondary mb-10 text-2xl">
                 Clients we&apos;ve worked with
             </h5>
 
