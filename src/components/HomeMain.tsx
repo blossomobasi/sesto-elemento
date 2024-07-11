@@ -42,15 +42,15 @@ const HomeMain = () => {
                     curContent === i && (
                         <div
                             key={i}
-                            className="flex flex-col items-start justify-center gap-y-6 px-12 h-[calc(100vh-7rem)]"
+                            className="flex flex-col lg:items-start items-center justify-center gap-y-6 md:px-12 px-5 lg:h-[calc(100vh-7rem)] h-[calc(100vh-6rem)] text-center lg:text-left "
                             style={{
                                 backgroundImage: `url(${item.image})`,
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
                             }}
                         >
-                            <div className="w-1/2 flex flex-col gap-y-6">
-                                <h1 className="text-6xl font-bold">
+                            <div className="lg:w-1/2 flex flex-col gap-y-6">
+                                <h1 className="md:text-6xl sm:text-5xl text-4xl font-bold">
                                     {item.title.split(" ").map((word, i) => (
                                         <span
                                             key={i}
@@ -62,7 +62,7 @@ const HomeMain = () => {
                                         </span>
                                     ))}
                                 </h1>
-                                <p className="text-2xl">{item.description}</p>
+                                <p className="sm:text-2xl text-lg">{item.description}</p>
                             </div>
                             <Button url="contact" style={{ backgroundColor: "red" }}>
                                 Work with us
