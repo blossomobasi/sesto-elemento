@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${lexend.className} bg-light overflow-x-hidden`}>{children}</body>
+            <body className={`${lexend.className} bg-light overflow-x-hidden text-textColor`}>
+                {children}
+            </body>
         </html>
     );
 }
