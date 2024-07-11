@@ -65,8 +65,8 @@ const Footer = () => {
                 <ul className="flex-[1.5] flex flex-col space-y-2">
                     <h2 className="text-lg font-medium">Contact Us</h2>
 
-                    <Link href="/">Customer Support</Link>
-                    <Link href="/">Help</Link>
+                    <Link href="/contact">Customer Support</Link>
+                    <Link href="/contact">Help</Link>
                 </ul>
             </div>
             <div className="flex items-center justify-between">
