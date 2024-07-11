@@ -4,10 +4,16 @@ import Image from "next/image";
 
 const WhyUs = () => {
     return (
-        <section className="bg-primaryVeryLight">
+        <section className="bg-primaryVeryLight py-5">
             <div className="gap-x-8 flex flex-col md:flex-row items-center justify-between">
-                <Image src="/images/why_us.png" alt="Why Us" width={700} height={700} />
-                <div className="flex flex-col items-start gap-y-5 mr-12">
+                <Image
+                    src="/images/why_us.png"
+                    alt="Why Us"
+                    className="w-1/2"
+                    width={1000}
+                    height={1000}
+                />
+                <div className="flex flex-col items-start gap-y-5 mr-12 w-1/2">
                     <h2 className="text-6xl font-semibold text-secondary">Why Us?</h2>
                     <p className="text-2xl">
                         Our track record speaks for itself. We have a long history of successfully
