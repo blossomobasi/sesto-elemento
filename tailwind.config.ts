@@ -16,6 +16,9 @@ const config: Config = {
                 secondary: "#004865",
                 textColor: "#232323",
             },
+            fontFamily: {
+                lato: "var(--font-lato)",
+            },
         },
     },
     plugins: [],
