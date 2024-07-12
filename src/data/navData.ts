@@ -4,10 +4,10 @@ export const navData: NavData[] = [
     { title: "Home", href: "/" },
     {
         title: "About Us",
-        href: "/about-us",
+        href: "/about",
         subLink: [
-            { title: "Mission", href: "/about-us/#mission" },
-            { title: "Vision", href: "/about-us/#vision" },
+            { title: "Mission", href: "/about/#mission" },
+            { title: "Vision", href: "/about/#vision" },
         ],
     },
     {
