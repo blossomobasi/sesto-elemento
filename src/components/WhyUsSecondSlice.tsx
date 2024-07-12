@@ -12,7 +12,7 @@ const WhyUsSecondSlice = () => {
                 height={1000}
             />
 
-            <div className="md:pr-12 px-5 flex flex-col md:items-start text-center items-center space-y-5 md:w-1/2">
+            <div className="md:pr-16 px-5 flex flex-col md:items-start md:text-start text-center items-center space-y-5 md:w-1/2">
                 <h2 className="lg:text-5xl md:text-4xl text-3xl font-semibold">
                     <span className="text-primary">Our Expertise</span>{" "}
                     <span className="text-secondary">Spans For Multiple </span>
