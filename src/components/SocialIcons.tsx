@@ -1,20 +1,23 @@
-import Image from "next/image";
 import Link from "next/link";
+import { CiLinkedin } from "react-icons/ci";
+
+import { FiInstagram } from "react-icons/fi";
+import { LiaFacebookSquare, LiaTwitterSquare } from "react-icons/lia";
 
 const SocialIcons = () => {
     return (
         <div className="flex items-center space-x-5">
             <Link href="/">
-                <Image src="/assets/instagram.png" alt="Instagram" width={20} height={20} />
+                <FiInstagram size={25} />
             </Link>
             <Link href="/">
-                <Image src="/assets/facebook.png" alt="Instagram" width={20} height={20} />
+                <LiaFacebookSquare size={33} />
             </Link>
             <Link href="/">
-                <Image src="/assets/twitter.png" alt="Instagram" width={20} height={20} />
+                <LiaTwitterSquare size={33} />
             </Link>
             <Link href="/">
-                <Image src="/assets/linkedin.png" alt="Instagram" width={20} height={20} />
+                <CiLinkedin size={33} />
             </Link>
         </div>
     );
