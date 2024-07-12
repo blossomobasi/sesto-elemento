@@ -1,4 +1,10 @@
 import Image from "next/image";
+
+import { LiaPhoneVolumeSolid } from "react-icons/lia";
+import { IoLocationOutline } from "react-icons/io5";
+import { FiInstagram } from "react-icons/fi";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+
 import Footer from "./Footer";
 
 const Contact = () => {
@@ -12,12 +18,7 @@ const Contact = () => {
                     <div className="flex flex-col">
                         <div className="flex space-x-5">
                             <span>
-                                <Image
-                                    src="/assets/marker.png"
-                                    alt="Location"
-                                    width={30}
-                                    height={30}
-                                />
+                                <IoLocationOutline size={25} />
                             </span>
 
                             <div className="flex flex-col space-y-5">
@@ -43,7 +44,9 @@ const Contact = () => {
                     </div>
 
                     <div className="flex items-start space-x-5">
-                        <Image src="/assets/phone_call.png" alt="Phone" width={20} height={20} />
+                        <span>
+                            <LiaPhoneVolumeSolid size={25} />
+                        </span>
 
                         <div className="flex flex-col font-semibold">
                             <code>+234 8023535353</code>
@@ -52,11 +55,11 @@ const Contact = () => {
                     </div>
 
                     <div className="flex space-x-5 items-center">
-                        <Image src="/assets/instagram.png" alt="Instagram" width={20} height={20} />
+                        <FiInstagram size={25} />
                         <span>sesl_ng</span>
                     </div>
                     <div className="flex space-x-5 items-center">
-                        <Image src="/assets/envelope.png" alt="Email" width={20} height={20} />
+                        <HiOutlineEnvelope size={25} />
                         <span>info@sesl-ng.com</span>
                     </div>
                 </div>
