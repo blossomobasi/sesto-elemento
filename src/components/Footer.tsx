@@ -66,7 +66,7 @@ const Footer = () => {
                     </Link>
                 </ul>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between md:flex-row flex-col space-y-5 sm:space-y-0">
                 <p>Follow us in all our social media platforms</p>
 
                 <SocialIcons />
