@@ -66,8 +66,7 @@ const Contact = () => {
                     alt="Reach out to us"
                     width={1000}
                     height={1000}
-                    quality={100}
-                    className="md:w-1/2 mb-10 sm:mb-0"
+                    className="md:w-1/2 sm:w-[500px] mb-10 sm:mb-0"
                 />
             </div>
 
