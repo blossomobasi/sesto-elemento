@@ -2,21 +2,21 @@ import React from "react";
 
 const AboutMain = () => {
     return (
-        <section className="bg-primaryVeryLight h-[calc(100vh-7rem)] flex flex-col items-center justify-center text-center space-y-5 px-16">
-            <h1 className="text-6xl font-extrabold font-lato">
+        <section className="bg-primaryVeryLight sm:h-[calc(100vh-7rem)] h-[calc(100vh-10rem)] flex flex-col items-center md:justify-center md:pt-0 pt-10 text-center space-y-5 md:px-16 px-5">
+            <h1 className="md:text-6xl sm:text-5xl text-4xl font-extrabold font-lato">
                 <span className="text-secondary">SESTO </span>
                 <span className="text-primary">ELEMENTO </span> <br />
                 <span className="text-primary">SERVICES </span>
                 <span className="text-secondary">LIMITED</span>
             </h1>
 
-            <div className="h-5 w-5 rounded-full bg-secondary absolute top-32 left-20" />
-            <div className="h-5 w-5 rounded-full bg-secondary absolute top-48 left-[26rem]" />
-            <div className="h-5 w-5 rounded-full bg-secondary absolute top-56 right-56" />
+            <div className="h-5 w-5 rounded-full bg-secondary absolute top-32 left-20 hidden md:block" />
+            <div className="h-5 w-5 rounded-full bg-secondary absolute top-48 left-[26rem] hidden md:block" />
+            <div className="h-5 w-5 rounded-full bg-secondary absolute top-56 right-56 hidden md:block" />
 
-            <div className="h-5 w-5 rounded-full bg-primary absolute left-32 top-[22rem]" />
-            <div className="h-5 w-5 rounded-full bg-primary absolute left-[45rem] bottom-20" />
-            <div className="h-5 w-5 rounded-full bg-primary absolute right-20 bottom-32" />
+            <div className="h-5 w-5 rounded-full bg-primary absolute left-32 top-[22rem] hidden md:block" />
+            <div className="h-5 w-5 rounded-full bg-primary absolute left-[45rem] bottom-20 hidden md:block" />
+            <div className="h-5 w-5 rounded-full bg-primary absolute right-20 bottom-32 hidden md:block" />
 
             <div>
                 <p>
