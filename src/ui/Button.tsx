@@ -9,7 +9,7 @@ interface ButtonProps
     url?: string;
 }
 
-const Button = ({ children, url = "" }: ButtonProps) => {
+const Button = ({ children, url = "/" }: ButtonProps) => {
     if (url) {
         return (
             <Link href={url} className="bg-secondary w-fit text-light px-4 py-2 rounded-md">
