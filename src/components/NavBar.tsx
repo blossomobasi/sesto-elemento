@@ -1,32 +1,40 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 import Logo from "@/ui/Logo";
-import Link from "next/link";
+
 import { FaChevronDown, FaChevronRight } from "react-icons/fa6";
-import { CgMenuCheese } from "react-icons/cg";
+import { CgClose, CgMenuCheese } from "react-icons/cg";
 
 import { navData as navDataApi } from "@/data/navData";
 
 const NavBar = () => {
     const [showSubLink, setShowSubLink] = useState(0);
     const [showNav, setShowNav] = useState(false);
+    const pathname = usePathname();
+    const router = useRouter();
 
     const navData = navDataApi;
 
     return (
-        <header className="flex items-center justify-between md:px-16 px-5 py-6 bg-white sticky top-0 w-full shadow-sm z-50">
-            <Logo />
+        <header className="flex items-center justify-between lg:px-16 px-5 py-6 bg-white sticky top-0 w-full shadow-sm z-50">
+            <div className="md:scale-100 scale-75">
+                <Logo />
+            </div>
 
-            {/* Large Screen */}
+            {/* ----------- LARGE SCREEN ---------- */}
             <nav className="hidden sm:flex">
-                <ul className="flex items-center gap-x-8">
+                <ul className="flex items-center lg:gap-x-8 gap-x-4">
                     {navData.map((link, i) => (
-                        <li key={link.href} className="relative">
+                        <li key={link.href}>
                             <Link
                                 href={link.href}
-                                className="flex items-center gap-x-2"
+                                className={`${
+                                    pathname === link.href && "text-secondary"
+                                } flex items-center lg:gap-x-2 gap-1 lg:text-base text-sm`}
                                 onMouseEnter={() => {
                                     link.subLink && setShowSubLink(i);
                                 }}
@@ -45,7 +53,7 @@ const NavBar = () => {
                                 )}
                             </Link>
 
-                            {/* DropDown */}
+                            {/* ----------- LARGE SCREEN DROPDOWN ----------- */}
                             {link.subLink && showSubLink === i && (
                                 <ul
                                     className="absolute py-2 px-3 bg-white rounded-md w-52 shadow-md text-sm"
@@ -56,7 +64,9 @@ const NavBar = () => {
                                         <li key={sub.title}>
                                             <Link
                                                 href={sub.href || ""}
-                                                className="py-2 px-4 flex items-center gap-x-2 w-auto hover:underline"
+                                                className={`${
+                                                    pathname === sub.href && "text-secondary"
+                                                } py-2 px-4 flex items-center gap-x-2 w-auto hover:underline`}
                                             >
                                                 <div className="h-2 w-2 rounded-full bg-secondary" />
                                                 {sub.title}
@@ -70,10 +80,10 @@ const NavBar = () => {
                 </ul>
             </nav>
 
-            {/* Small Screen */}
+            {/* ----------- SMALL SCREEN ----------- */}
             <nav
                 className={`${
-                    showNav ? "z-50" : "-top-96 -z-50"
+                    showNav ? "z-50" : "-top-96 -z-50 opacity-0"
                 } absolute top-[7rem] bg-white w-full left-0 py-4 h-fit block sm:hidden transition-all duration-300 ease-in-out`}
             >
                 <ul className="flex flex-col gap-y-4 px-8 pb-10">
@@ -89,10 +99,16 @@ const NavBar = () => {
                                 {link.subLink && showSubLink === i && (
                                     <ul className="text-textColor/80 ml-5 border-l border-textColor/60 px-5 flex flex-col gap-y-3">
                                         {link.subLink.map((sub, i) => (
-                                            <li key={sub.title}>
-                                                <Link href={sub.href} className="hover:underline">
-                                                    {sub.title}
-                                                </Link>
+                                            <li
+                                                key={sub.title}
+                                                className="hover:underline"
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+
+                                                    router.push(sub.href);
+                                                }}
+                                            >
+                                                {sub.title}
                                             </li>
                                         ))}
                                     </ul>
@@ -118,12 +134,23 @@ const NavBar = () => {
                 </Link>
             </nav>
 
+            {/* ----------- MENU ICON ----------- */}
             <span>
-                <CgMenuCheese
-                    size={30}
-                    onClick={() => setShowNav(!showNav)}
-                    className="sm:hidden cursor-pointer"
-                />
+                {showNav ? (
+                    <CgClose
+                        size={30}
+                        onClick={() => setShowNav(!showNav)}
+                        className={`${
+                            showNav && "rotate-180 animate-spin"
+                        } sm:hidden cursor-pointer`}
+                    />
+                ) : (
+                    <CgMenuCheese
+                        size={30}
+                        onClick={() => setShowNav(!showNav)}
+                        className="sm:hidden cursor-pointer"
+                    />
+                )}
             </span>
 
             <Link href="/contact" className="text-secondary font-medium hidden md:flex">
