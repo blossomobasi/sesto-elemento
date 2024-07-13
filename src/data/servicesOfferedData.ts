@@ -40,23 +40,12 @@ export const servicesOffered = [
         },
     },
     {
-        title: "Man power supply",
+        title: "Man Power Supply",
         firstParagraph:
             "We recognize that skilled and efficient manpower is the backbone of any successful project. With our expertise in sourcing and providing top-tier talent, we ensure that your workforce is equipped to meet the demands of your project and drive optimal operational performance.",
         image: {
             src: "/images/man_power.png",
             alt: "Man power supply",
-        },
-    },
-    {
-        title: "Equipment Lease",
-        firstParagraph:
-            "We are aware that having the right equipment is essential for the seamless execution of your projects. We offer a comprehensive range of equipment lease options tailored to meet your specific needs, ensuring that you have access to the tools necessary to drive efficiency and productivity.",
-        secondParagraph:
-            "Our extensive fleet of state-of-the-art equipment is meticulously maintained and regularly serviced to deliver exceptional performance and reliability. From heavy machinery to specialized tools, we have the resources to support a wide range of industries and project requirements.",
-        image: {
-            src: "/images/equipment_lease.png",
-            alt: "Equipment Lease",
         },
     },
     {
@@ -77,6 +66,17 @@ export const servicesOffered = [
         image: {
             src: "/images/technical_site.png",
             alt: "Technical Site Asst",
+        },
+    },
+    {
+        title: "Equipment Lease",
+        firstParagraph:
+            "We are aware that having the right equipment is essential for the seamless execution of your projects. We offer a comprehensive range of equipment lease options tailored to meet your specific needs, ensuring that you have access to the tools necessary to drive efficiency and productivity.",
+        secondParagraph:
+            "Our extensive fleet of state-of-the-art equipment is meticulously maintained and regularly serviced to deliver exceptional performance and reliability. From heavy machinery to specialized tools, we have the resources to support a wide range of industries and project requirements.",
+        image: {
+            src: "/images/equipment_lease.png",
+            alt: "Equipment Lease",
         },
     },
 ];
