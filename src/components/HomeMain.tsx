@@ -42,7 +42,7 @@ const HomeMain = () => {
                     curContent === i && (
                         <div
                             key={i}
-                            className="flex flex-col lg:items-start items-center justify-center gap-y-6 md:px-16 px-5 lg:h-[calc(100vh-7rem)] h-[calc(100vh-6rem)] text-center lg:text-left "
+                            className="flex flex-col lg:items-start items-center sm:justify-center sm:py-0 py-32 gap-y-6 md:px-16 px-5 lg:h-[calc(100vh-7rem)] h-[calc(100vh-6rem)] text-center lg:text-left "
                             style={{
                                 backgroundImage: `url(${item.image})`,
                                 backgroundSize: "cover",
