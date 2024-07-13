@@ -1,13 +1,14 @@
 import NavBar from "./NavBar";
 import Contact from "./Contact";
+import { ServicesProvider } from "@/context/ServicesContext";
 
 const PageLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div>
+        <ServicesProvider>
             <NavBar />
             {children}
             <Contact />
-        </div>
+        </ServicesProvider>
     );
 };
 
