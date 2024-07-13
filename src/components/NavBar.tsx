@@ -10,8 +10,10 @@ import { FaChevronDown, FaChevronRight } from "react-icons/fa6";
 import { CgClose, CgMenuCheese } from "react-icons/cg";
 
 import { navData as navDataApi } from "@/data/navData";
+import { useServices } from "@/context/ServicesContext";
 
 const NavBar = () => {
+    const { setActiveService, setHashValue } = useServices();
     const [showSubLink, setShowSubLink] = useState(0);
     const [showNav, setShowNav] = useState(false);
     const pathname = usePathname();
@@ -64,6 +66,10 @@ const NavBar = () => {
                                         <li key={sub.title}>
                                             <Link
                                                 href={sub.href || ""}
+                                                onClick={() => {
+                                                    setActiveService(sub.title);
+                                                    setHashValue(sub.href);
+                                                }}
                                                 className={`${
                                                     pathname === sub.href && "text-secondary"
                                                 } py-2 px-4 flex items-center gap-x-2 w-auto hover:underline`}
