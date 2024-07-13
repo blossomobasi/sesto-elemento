@@ -7,11 +7,11 @@ export const companyData: subLink[] = [
 ];
 
 export const services: subLink[] = [
-    { title: "Procurement", href: "/sevices/#procurement" },
-    { title: "Contracting", href: "/sevices/#contraction" },
-    { title: "Man Power Supply", href: "/sevices/#man-power-supply" },
-    { title: "Technical Site Asst", href: "/sevices/#technical-site-asst" },
-    { title: "Equipment Lease", href: "/sevices/#equipment-lease" },
+    { title: "Procurement", href: "/services/#procurement" },
+    { title: "Contracting", href: "/services/#contraction" },
+    { title: "Man Power Supply", href: "/services/#man-power-supply" },
+    { title: "Technical Site Asst", href: "/services/#technical-site-asst" },
+    { title: "Equipment Lease", href: "/services/#equipment-lease" },
 ];
 
 export const sectors: subLink[] = [
