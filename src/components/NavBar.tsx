@@ -84,9 +84,9 @@ const NavBar = () => {
             <nav
                 className={`${
                     showNav ? "z-50" : "-top-96 -z-50 opacity-0"
-                } absolute top-[7rem] bg-white w-full left-0 py-4 h-fit block sm:hidden transition-all duration-300 ease-in-out`}
+                } absolute top-[7rem] bg-white w-full left-0 py-4 px-8 h-fit block sm:hidden transition-all duration-300 ease-in-out`}
             >
-                <ul className="flex flex-col gap-y-4 px-8 pb-10">
+                <ul className="flex flex-col gap-y-4 pb-10">
                     {navData.map((link, i) => (
                         <li
                             key={link.href}
@@ -129,7 +129,7 @@ const NavBar = () => {
                     ))}
                 </ul>
 
-                <Link href="/contact" className="text-secondary font-medium ml-8">
+                <Link href="/contact" className="text-secondary font-medium">
                     Contact Us
                 </Link>
             </nav>
