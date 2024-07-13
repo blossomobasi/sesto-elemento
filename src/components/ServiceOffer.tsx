@@ -10,19 +10,19 @@ const ServiceOffer = () => {
     const servicesOffered = servicesOfferedApi;
 
     return (
-        <section className="py-20 md:px-16 px-5">
+        <section className="py-20 md:px-10 px-5">
             <h1 className="text-5xl text-center font-semibold text-secondary">Services we Offer</h1>
 
             {/* Navigation */}
             <nav className="py-10">
-                <ul className="flex justify-center space-x-14 border-b border-secondary pb-2">
+                <ul className="flex lg:justify-center justify-between lg:space-x-12 border-b border-secondary pb-2 lg:text-base text-sm">
                     {servicesOffered.map((service, index) => (
                         <li
                             key={index}
                             className={`${
                                 activeService === service.title &&
-                                "relative text-secondary before:absolute before:w-[calc(100%+2rem)] before:h-0.5 before:bg-secondary before:-left-[1rem] before:-bottom-2 before:rounded-sm"
-                            } capitalize hover:text-secondary cursor-pointer font-medium`}
+                                "relative text-secondary before:absolute before:w-[calc(100%+2rem)] before:h-1 before:bg-secondary before:-left-[1rem] before:-bottom-2.5 before:rounded-sm"
+                            } capitalize hover:text-secondary cursor-pointer lg:font-medium`}
                             onClick={() => setActiveService(service.title)}
                         >
                             {service.title}
@@ -32,7 +32,7 @@ const ServiceOffer = () => {
             </nav>
 
             {/* Content Display */}
-            <div className="flex items-center px-28 space-x-20">
+            <div className="flex md:flex-row flex-col items-center lg:px-28 lg:space-x-20 md:space-x-10 md:space-y-0 space-y-10">
                 {servicesOffered.map(
                     (service, index) =>
                         activeService === service.title && (
@@ -42,27 +42,27 @@ const ServiceOffer = () => {
                                 key={index}
                                 width={1000}
                                 height={1000}
-                                className="w-[496.5px] h-[513px]"
+                                className="md:w-1/2 md:h-1/2 sm:w-[513px] sm:h-[497px] w-full"
                             />
                         )
                 )}
 
-                <div className="flex flex-col space-y-5">
+                <div className="flex flex-col space-y-5 md:w-1/2">
                     {servicesOffered.map(
                         (service) =>
                             activeService === service.title && (
                                 <>
-                                    <h1 className="text-4xl text-secondary font-semibold uppercase">
+                                    <h1 className="lg:text-4xl text-3xl text-secondary font-semibold capitalize">
                                         {service.title}
                                     </h1>
-                                    <p>{service.firstParagraph}</p>
+                                    <p className="lg:text-base text-sm">{service.firstParagraph}</p>
 
-                                    <ul>
+                                    <ul className="lg:text-base text-sm">
                                         <p
                                             className={`${
                                                 service.title === "Technical Site Asst" &&
                                                 "text-primary"
-                                            } mb-2 -ml-4`}
+                                            } mb-2`}
                                         >
                                             {service?.secondParagraph}
                                         </p>
