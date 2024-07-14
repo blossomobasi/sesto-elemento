@@ -16,14 +16,15 @@ const NavBar = () => {
     const { setActiveService, setHashValue } = useServices();
     const [showSubLink, setShowSubLink] = useState(0);
     const [showNav, setShowNav] = useState(false);
+
     const pathname = usePathname();
     const router = useRouter();
 
     const navData = navDataApi;
 
     return (
-        <header className="flex items-center justify-between lg:px-16 px-5 py-6 bg-white sticky top-0 w-full shadow-sm z-50">
-            <div className="md:scale-100 scale-75">
+        <header className="flex items-center justify-between lg:px-16 px-5 py-6 bg-white sticky top-0 w-full shadow-sm z-[100]">
+            <div>
                 <Logo />
             </div>
 
@@ -45,12 +46,11 @@ const NavBar = () => {
                                 {link.title}
                                 {link.subLink && (
                                     <FaChevronDown
-                                        size={14}
                                         className={`${
                                             link.subLink && showSubLink === i
                                                 ? "rotate-180 transition duration-300 ease"
                                                 : ""
-                                        }`}
+                                        } md:text-sm text-xs`}
                                     />
                                 )}
                             </Link>
@@ -89,8 +89,8 @@ const NavBar = () => {
             {/* ----------- SMALL SCREEN ----------- */}
             <nav
                 className={`${
-                    showNav ? "z-50" : "-top-96 -z-50 opacity-0"
-                } absolute top-[7rem] bg-white w-full left-0 py-4 px-8 h-fit block sm:hidden transition-all duration-300 ease-in-out`}
+                    !showNav && "-top-[10rem] invisible opacity-0 -z-50"
+                } z-50 absolute top-[7rem] bg-white w-full left-0 py-4 px-8 h-fit block sm:hidden transition-all duration-300 ease-in-out`}
             >
                 <ul className="flex flex-col gap-y-4 pb-10">
                     {navData.map((link, i) => (
@@ -141,7 +141,7 @@ const NavBar = () => {
             </nav>
 
             {/* ----------- MENU ICON ----------- */}
-            <span>
+            <span className="sm:hidden">
                 {showNav ? (
                     <CgClose
                         size={30}
