@@ -23,7 +23,7 @@ const WhyUsSecondSlice = () => {
                     sectors. Our expertise spans multiple industries, enabling us to cater to the
                     unique needs and requirements of each sector
                 </p>
-                <Button>Work with us</Button>
+                <Button url="contact">Work with us</Button>
             </div>
         </div>
     );
