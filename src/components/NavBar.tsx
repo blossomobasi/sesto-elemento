@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 import Logo from "@/ui/Logo";
 
@@ -21,7 +21,6 @@ const NavBar = () => {
     const [showNav, setShowNav] = useState(false);
 
     const pathname = usePathname();
-    const router = useRouter();
 
     const navData = navDataApi;
 
@@ -105,26 +104,28 @@ const NavBar = () => {
                                 showSubLink === i && showSubLink ? "items-start" : "items-center"
                             } flex justify-between w-80`}
                         >
-                            <Link href={link.href} className="flex flex-col gap-y-3">
-                                {link.title}
+                            <li className="flex flex-col gap-y-3">
+                                <Link href={link.href}>{link.title}</Link>
                                 {link.subLink && showSubLink === i && (
                                     <ul className="text-textColor/80 ml-5 border-l border-textColor/60 px-5 flex flex-col gap-y-3">
                                         {link.subLink.map((sub, i) => (
-                                            <li
+                                            <Link
                                                 key={sub.title}
                                                 className="hover:underline"
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-
-                                                    router.push(sub.href);
+                                                href={sub.href}
+                                                onClick={() => {
+                                                    setActiveService(sub.title);
+                                                    setServicesHashValue(sub.href);
+                                                    setActiveSector(sub.title);
+                                                    setSectorsHashValue(sub.href);
                                                 }}
                                             >
                                                 {sub.title}
-                                            </li>
+                                            </Link>
                                         ))}
                                     </ul>
                                 )}
-                            </Link>
+                            </li>
                             {link.subLink && (
                                 <FaChevronRight
                                     onClick={() => setShowSubLink((prev) => (prev === i ? 0 : i))}
