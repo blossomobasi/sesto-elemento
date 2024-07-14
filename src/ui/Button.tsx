@@ -7,19 +7,24 @@ interface ButtonProps
     > {
     children: React.ReactNode;
     url?: string;
+    className?: string;
 }
 
-const Button = ({ children, url = "/" }: ButtonProps) => {
+const Button = ({ children, url = "/", className, ...props }: ButtonProps) => {
+    const btnClasses = `bg-secondary w-fit text-light px-4 py-2 rounded-md ${className}`;
+
     if (url) {
         return (
-            <Link href={url} className="bg-secondary w-fit text-light px-4 py-2 rounded-md">
+            <Link href={url} className={btnClasses}>
                 {children}
             </Link>
         );
     }
 
     return (
-        <button className="bg-secondary w-fit text-light px-4 py-2 rounded-md">{children}</button>
+        <button className={btnClasses} {...props}>
+            {children}
+        </button>
     );
 };
 
