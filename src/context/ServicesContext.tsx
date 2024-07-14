@@ -5,21 +5,21 @@ import { createContext, useContext, useState } from "react";
 interface ServicesContextType {
     activeService: string;
     setActiveService: (service: string) => void;
-    hashValue: string;
-    setHashValue: (hash: string) => void;
+    serviceHashValue: string;
+    setServicesHashValue: (hash: string) => void;
 }
 
 const ServicesContext = createContext<ServicesContextType | undefined>(undefined);
 
 const ServicesProvider = ({ children }: { children: React.ReactNode }) => {
     const [activeService, setActiveService] = useState("Procurement");
-    const [hashValue, setHashValue] = useState("");
+    const [serviceHashValue, setServicesHashValue] = useState("");
 
-    hashValue.split("#")[1] && setHashValue(hashValue.split("#")[1]);
+    serviceHashValue.split("#")[1] && setServicesHashValue(serviceHashValue.split("#")[1]);
 
     return (
         <ServicesContext.Provider
-            value={{ activeService, setActiveService, hashValue, setHashValue }}
+            value={{ activeService, setActiveService, serviceHashValue, setServicesHashValue }}
         >
             {children}
         </ServicesContext.Provider>

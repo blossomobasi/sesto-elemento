@@ -1,6 +1,6 @@
 export const sectorsData = [
     {
-        title: "Oil, Gas, and Energy",
+        title: "Oil and Gas",
         firstParagraph:
             "Our team is experienced in supporting projects in the oil, gas, and energy sectors, including exploration, production, refining, and distribution. We offer specialized services such as manpower supply, equipment lease, logistics management, and safety compliance.",
         image: {
@@ -9,7 +9,7 @@ export const sectorsData = [
         },
     },
     {
-        title: "Construction and Contracting",
+        title: "Construction and Engineering",
         firstParagraph:
             " We provide end-to-end support for construction and engineering projects, offering services such as construction management, design coordination, procurement, and skilled labor supply.",
         image: {

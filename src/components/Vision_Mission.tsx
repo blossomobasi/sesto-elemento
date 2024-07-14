@@ -1,8 +1,16 @@
+"use client";
+
+import { useSectors } from "@/context/SectorsContext";
 import Image from "next/image";
 
 const Vision_Mission = () => {
+    const { sectorHashValue } = useSectors();
+
     return (
-        <section className="pt-10 md:px-16 px-5">
+        <section
+            className="pt-10 md:px-16 px-5"
+            id={sectorHashValue === "mission_vision" ? "mission_vision" : ""}
+        >
             <div className="text-center pb-10">
                 <h2 className="md:text-5xl text-4xl font-semibold text-secondary">Who we are</h2>
                 <p className="md:text-lg mt-5 md:px-20 px-5">

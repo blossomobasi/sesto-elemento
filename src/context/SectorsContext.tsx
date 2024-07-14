@@ -5,20 +5,22 @@ import { createContext, useContext, useState } from "react";
 interface SectorsContextType {
     activeSector: string;
     setActiveSector: (sector: string) => void;
-    hashValue: string;
-    setHashValue: (hash: string) => void;
+    sectorHashValue: string;
+    setSectorsHashValue: (hash: string) => void;
 }
 
 const SectorsContext = createContext<SectorsContextType | undefined>(undefined);
 
 const SectorsProvider = ({ children }: { children: React.ReactNode }) => {
-    const [activeSector, setActiveSector] = useState("Oil, Gas And Energy");
-    const [hashValue, setHashValue] = useState("");
+    const [activeSector, setActiveSector] = useState("Oil and Gas");
+    const [sectorHashValue, setSectorsHashValue] = useState("");
 
-    hashValue.split("#")[1] && setHashValue(hashValue.split("#")[1]);
+    sectorHashValue.split("#")[1] && setSectorsHashValue(sectorHashValue.split("#")[1]);
 
     return (
-        <SectorsContext.Provider value={{ activeSector, setActiveSector, hashValue, setHashValue }}>
+        <SectorsContext.Provider
+            value={{ activeSector, setActiveSector, sectorHashValue, setSectorsHashValue }}
+        >
             {children}
         </SectorsContext.Provider>
     );

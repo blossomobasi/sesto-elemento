@@ -4,15 +4,19 @@ import Image from "next/image";
 
 import { sectorsData as sectorsDataApi } from "@/data/sectorsData";
 import { useSectors } from "@/context/SectorsContext";
+import { useServices } from "@/context/ServicesContext";
 
 const Sectors = () => {
-    const { activeSector, setActiveSector, hashValue } = useSectors();
+    const { activeSector, setActiveSector, sectorHashValue } = useSectors();
+    const { activeService } = useServices();
     const sectorsData = sectorsDataApi;
 
+    console.log("active service", activeService);
+    console.log("active sector", activeSector);
     return (
-        <section className="py-20 md:px-10 px-5" id={hashValue}>
+        <section className="py-20 md:px-10 px-5" id={sectorHashValue}>
             <h1 className="md:text-5xl text-4xl pb-10 text-center font-semibold text-secondary">
-                Services we Offer
+                Our Sectors
             </h1>
 
             {/* Large Screen */}

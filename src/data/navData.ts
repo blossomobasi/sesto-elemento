@@ -6,8 +6,8 @@ export const navData: NavData[] = [
         title: "About Us",
         href: "/about",
         subLink: [
-            { title: "Mission", href: "/about/#mission" },
-            { title: "Vision", href: "/about/#vision" },
+            { title: "Mission", href: "/about/#mission_vision" },
+            { title: "Vision", href: "/about/#mission_vision" },
         ],
     },
     {
@@ -27,8 +27,11 @@ export const navData: NavData[] = [
         href: "/sectors",
         subLink: [
             { title: "Oil and Gas", href: "/sectors/#oil-and-gas" },
+            {
+                title: "Construction and Engineering",
+                href: "/sectors/#construction-and-engineering",
+            },
             { title: "Defence", href: "/sectors/#defence" },
-            { title: "Power Generation", href: "/sectors/#power-generation" },
             { title: "Infrastructure", href: "/sectors/#infrastructure" },
             { title: "Renewable", href: "/sectors/#renewable" },
         ],

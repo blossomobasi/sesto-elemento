@@ -6,11 +6,11 @@ import { servicesOffered as servicesOfferedApi } from "@/data/servicesOfferedDat
 import { useServices } from "@/context/ServicesContext";
 
 const ServiceOffer = () => {
-    const { activeService, setActiveService, hashValue } = useServices();
+    const { activeService, setActiveService, serviceHashValue } = useServices();
     const servicesOffered = servicesOfferedApi;
 
     return (
-        <section className="py-20 md:px-10 px-5" id={hashValue}>
+        <section className="py-20 md:px-10 px-5" id={serviceHashValue}>
             <h1 className="md:text-5xl text-4xl pb-10 text-center font-semibold text-secondary">
                 Services we Offer
             </h1>

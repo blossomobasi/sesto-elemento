@@ -11,9 +11,12 @@ import { CgClose, CgMenuCheese } from "react-icons/cg";
 
 import { navData as navDataApi } from "@/data/navData";
 import { useServices } from "@/context/ServicesContext";
+import { useSectors } from "@/context/SectorsContext";
 
 const NavBar = () => {
-    const { setActiveService, setHashValue } = useServices();
+    const { setActiveService, setServicesHashValue } = useServices();
+    const { setActiveSector, setSectorsHashValue } = useSectors();
+
     const [showSubLink, setShowSubLink] = useState(0);
     const [showNav, setShowNav] = useState(false);
 
@@ -68,7 +71,9 @@ const NavBar = () => {
                                                 href={sub.href || ""}
                                                 onClick={() => {
                                                     setActiveService(sub.title);
-                                                    setHashValue(sub.href);
+                                                    setServicesHashValue(sub.href);
+                                                    setActiveSector(sub.title);
+                                                    setSectorsHashValue(sub.href);
                                                 }}
                                                 className={`${
                                                     pathname === sub.href && "text-secondary"
