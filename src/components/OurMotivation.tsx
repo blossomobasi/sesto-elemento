@@ -13,7 +13,7 @@ const OurMotivation = () => {
                     build structures and roadways that will leave a lasting impression for our
                     clients, our society and our communities
                 </p>
-                <Button>Work with us</Button>
+                <Button url="contact">Work with us</Button>
             </div>
 
             <Image

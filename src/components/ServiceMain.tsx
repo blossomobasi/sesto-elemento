@@ -29,7 +29,7 @@ const ServiceMain = () => {
                     after-sales support.
                 </p>
 
-                <Button>Work with us</Button>
+                <Button url="contact">Work with us</Button>
             </div>
 
             <Image

@@ -64,7 +64,9 @@ const HomeMain = () => {
                                 </h1>
                                 <p className="sm:text-2xl text-lg">{item.description}</p>
                             </div>
-                            <Button url="contact">Work with us</Button>
+                            <Button url="contact" styles="text-light">
+                                Work with us
+                            </Button>
                         </div>
                     )
             )}

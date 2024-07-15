@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMain = () => {
     return (
-        <section className="bg-primaryVeryLight sm:h-[calc(100vh-7rem)] h-[calc(100vh-10rem)] flex flex-col items-center md:justify-center md:pt-0 pt-10 text-center space-y-5 md:px-16 px-5">
+        <section className="bg-primaryVeryLight sm:h-[calc(100vh-7rem)] h-[calc(100vh-10rem)] flex flex-col items-center md:justify-center md:pt-0 pt-32 text-center space-y-5 md:px-16 px-5">
             <h1 className="md:text-6xl sm:text-5xl text-4xl font-extrabold font-lato">
                 <span className="text-secondary">SESTO </span>
                 <span className="text-primary">ELEMENTO </span> <br />

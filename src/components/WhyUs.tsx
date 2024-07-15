@@ -21,9 +21,7 @@ const WhyUs = () => {
                         consistently praised our ability to deliver projects on time, within budget,
                         and to the highest quality standards.
                     </p>
-                    <span>
-                        <Button url="contact">Work with us</Button>
-                    </span>
+                    <Button url="contact">Work with us</Button>
                 </div>
             </div>
         </section>
