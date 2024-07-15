@@ -1,4 +1,15 @@
-export const servicesOffered = [
+export type DisplayNavContentType = {
+    title: string;
+    firstParagraph: string;
+    secondParagraph?: string;
+    listItem?: string[];
+    image: {
+        src: string;
+        alt: string;
+    };
+};
+
+export const servicesOffered: DisplayNavContentType[] = [
     {
         title: "Procurement",
         firstParagraph:
