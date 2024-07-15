@@ -15,9 +15,9 @@ export const services: subLink[] = [
 ];
 
 export const sectors: subLink[] = [
-    { title: "Oil and Gas", href: "/sector/#oil-and-gas" },
-    { title: "Defence", href: "/sector/#defence" },
-    { title: "Power Generation", href: "/sector/#power-generation" },
-    { title: "Infrastructure", href: "/sector/#infrastructure" },
-    { title: "Renewable", href: "/sector/#renewable" },
+    { title: "Oil and Gas", href: "/sectors/#oil-and-gas" },
+    { title: "Defence", href: "/sectors/#defence" },
+    { title: "Power Generation", href: "/sectors/#power-generation" },
+    { title: "Infrastructure", href: "/sectors/#infrastructure" },
+    { title: "Renewable", href: "/sectors/#renewable" },
 ];
