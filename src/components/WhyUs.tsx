@@ -22,7 +22,7 @@ const WhyUs = () => {
                         and to the highest quality standards.
                     </p>
                     <span>
-                        <Button>Work with us</Button>
+                        <Button url="contact">Work with us</Button>
                     </span>
                 </div>
             </div>

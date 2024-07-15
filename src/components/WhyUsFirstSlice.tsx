@@ -14,7 +14,7 @@ const WhyUsFirstSlice = () => {
                     At Sesto Elemento ltd. We pride ourselves in helping clients save time, reduce
                     costs, enhance project efficiency, and mitigate risks.
                 </p>
-                <Button url="contact">Read More</Button>
+                <Button url="about">Read More</Button>
             </div>
 
             <Image

@@ -1,28 +1,23 @@
 import Link from "next/link";
 
-interface ButtonProps
-    extends React.DetailedHTMLProps<
-        React.ButtonHTMLAttributes<HTMLButtonElement>,
-        HTMLButtonElement
-    > {
+const Button = ({
+    styles,
+    children,
+    url = "/",
+}: {
     children: React.ReactNode;
+    styles?: string;
     url?: string;
-    className?: string;
-}
-
-const Button = ({ children, url = "/", className, ...props }: ButtonProps) => {
-    const btnClasses = `bg-secondary w-fit text-light px-4 py-2 rounded-md ${className}`;
-
-    if (url) {
+}) => {
+    if (url)
         return (
-            <Link href={url} className={btnClasses}>
+            <Link href={url} className={`px-32 py-4 text-light rounded-md bg-secondary ${styles}`}>
                 {children}
             </Link>
         );
-    }
 
     return (
-        <button className={btnClasses} {...props}>
+        <button className={`px-32 py-4 text-light rounded-md bg-secondary ${styles}`}>
             {children}
         </button>
     );
