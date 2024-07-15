@@ -1,4 +1,6 @@
-export const sectorsData = [
+import { DisplayNavContentType } from "./servicesOfferedData";
+
+export const sectorsData: DisplayNavContentType[] = [
     {
         title: "Oil and Gas",
         firstParagraph:
