@@ -98,16 +98,16 @@ const NavBar = () => {
             >
                 <ul className="flex flex-col gap-y-4 pb-10">
                     {navData.map((link, i) => (
-                        <li
+                        <div
                             key={link.href}
                             className={`${
                                 showSubLink === i && showSubLink ? "items-start" : "items-center"
                             } flex justify-between w-80`}
                         >
-                            <li className="flex flex-col gap-y-3">
+                            <div className="flex flex-col gap-y-3">
                                 <Link href={link.href}>{link.title}</Link>
                                 {link.subLink && showSubLink === i && (
-                                    <ul className="text-textColor/80 ml-5 border-l border-textColor/60 px-5 flex flex-col gap-y-3">
+                                    <li className="text-textColor/80 ml-5 border-l border-textColor/60 px-5 flex flex-col gap-y-3">
                                         {link.subLink.map((sub, i) => (
                                             <Link
                                                 key={sub.title}
@@ -123,9 +123,9 @@ const NavBar = () => {
                                                 {sub.title}
                                             </Link>
                                         ))}
-                                    </ul>
+                                    </li>
                                 )}
-                            </li>
+                            </div>
                             {link.subLink && (
                                 <FaChevronRight
                                     onClick={() => setShowSubLink((prev) => (prev === i ? 0 : i))}
@@ -137,7 +137,7 @@ const NavBar = () => {
                                     } `}
                                 />
                             )}
-                        </li>
+                        </div>
                     ))}
                 </ul>
 
