@@ -1,5 +1,4 @@
 import Button from "@/ui/Button";
-// import FlexRow from "@/ui/FlexRow";
 import Image from "next/image";
 
 const WhyUs = () => {
