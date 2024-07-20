@@ -105,35 +105,30 @@ const NavBar = () => {
                             } flex justify-between w-80`}
                         >
                             <div className="flex flex-col gap-y-3">
-                                <p
+                                <Link
+                                    href={link.href}
                                     onClick={() => setShowSubLink((prev) => (prev === i ? 0 : i))}
-                                    className="cursor-pointer"
                                 >
                                     {link.title}
-                                </p>
+                                </Link>
                                 {link.subLink && showSubLink === i && (
-                                    <>
-                                        <Link href={link.href} className="ml-5 text-textColor/80">
-                                            {link.title}
-                                        </Link>
-                                        <li className="text-textColor/80 ml-5 border-l border-textColor/60 px-5 flex flex-col gap-y-3">
-                                            {link.subLink.map((sub) => (
-                                                <Link
-                                                    key={sub.title}
-                                                    className="hover:underline"
-                                                    href={sub.href}
-                                                    onClick={() => {
-                                                        setActiveService(sub.title);
-                                                        setServicesHashValue(sub.href);
-                                                        setActiveSector(sub.title);
-                                                        setSectorsHashValue(sub.href);
-                                                    }}
-                                                >
-                                                    {sub.title}
-                                                </Link>
-                                            ))}
-                                        </li>
-                                    </>
+                                    <li className="text-textColor/80 ml-5 border-l border-textColor/60 px-5 flex flex-col gap-y-3">
+                                        {link.subLink.map((sub) => (
+                                            <Link
+                                                key={sub.title}
+                                                className="hover:underline"
+                                                href={sub.href}
+                                                onClick={() => {
+                                                    setActiveService(sub.title);
+                                                    setServicesHashValue(sub.href);
+                                                    setActiveSector(sub.title);
+                                                    setSectorsHashValue(sub.href);
+                                                }}
+                                            >
+                                                {sub.title}
+                                            </Link>
+                                        ))}
+                                    </li>
                                 )}
                             </div>
                             {link.subLink && (
